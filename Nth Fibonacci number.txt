@@ -1,0 +1,22 @@
+#! /bin/bash
+
+echo -e 'Enter a value: \c' 
+read a
+
+ai=1
+b=0
+c=0
+d=0
+if [ $a -le 0 ]
+then 
+	echo "Invalid, Enter a valid number"
+else
+	while [ $a -gt $d ]
+	do 
+		d=$(( $d + 1 ))
+		c=$(( $ai + $b ))
+		ai=$b
+		b=$c
+	done
+	echo $ai 'is the' $a'th Fibonacci Number.'
+fi

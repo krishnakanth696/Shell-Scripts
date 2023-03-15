@@ -1,0 +1,19 @@
+#! /bin/bash
+
+echo -e 'Enter a string: \c'
+read a
+
+b=$(( ${#a} - 1 ))
+d=$(( $b / 2 ))
+for (( i=0 ; i< $d ; i++ ))
+do
+	c=$(( $b - i ))
+	e=$(( $d - 1 ))
+	if [ ${a:$i:1} == ${a:$c:1} ] && [ $i -eq $e ]
+	then 
+		echo $a  'is a palindrome'
+	elif [ $i -eq $e ]
+	then 
+	    echo $a  'is not a palindrome'
+	fi
+done

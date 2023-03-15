@@ -1,0 +1,19 @@
+#! /bin/bash
+
+echo -e 'Enter a number: \c'
+read a
+b=$(( $a / 2 ))
+for (( i=2 ; i<= $b ; i++ ))
+do
+    c=$(( $a % $i ))
+    if [ $c -eq 0 ]
+	then 
+		echo $a  'is not a prime number'
+		exit
+	else
+	    if [ $i -eq $b ]
+	    then
+	        echo $a  'is a prime number'
+	   fi
+	fi
+done

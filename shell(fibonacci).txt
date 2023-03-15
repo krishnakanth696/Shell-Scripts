@@ -1,0 +1,20 @@
+#! /bin/bash
+
+echo 'Enter a Value:'
+read a
+
+ai=1
+b=0
+c=0
+if [ $a -le 0 ]
+then 
+	echo "Invalid, Enter a valid number"
+else
+    while [ $a -ge $c ]
+    do 
+	    c=$(( $ai + $b ))
+	    echo "$b"
+	    ai=$b
+	    b=$c
+   done
+fi
